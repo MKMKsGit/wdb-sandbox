@@ -25,7 +25,91 @@ export default {
         info: 'hsla(225, 100%, 60%, 1)',
         success: 'hsla(147, 83%, 44%, 1)',
       },
-      fontFamily: ['Poppins', 'Inter', 'sans-serif'],
+      fontFamily: {
+        sans: ['Poppins', 'Inter', 'sans-serif'],
+      },
+      fontSize: {
+        '6xl': [
+          //h1
+          '96px',
+          {
+            lineHeight: '1.21',
+            fontWeight: '700',
+          },
+        ],
+        '5xl': [
+          //h2
+          '64px',
+          {
+            lineHeight: '1.44',
+            fontWeight: '700',
+          },
+        ],
+        '4xl': [
+          //h3
+          '48px',
+          {
+            lineHeight: '1.50',
+            fontWeight: '700',
+          },
+        ],
+        '3xl': [
+          //h4
+          '40px',
+          {
+            lineHeight: '1.50',
+            fontWeight: '700',
+          },
+        ],
+        '2xl': [
+          //h5
+          '32px',
+          {
+            lineHeight: '1.50',
+            fontWeight: '700',
+          },
+        ],
+        xl: [
+          //h6
+          '24px',
+          {
+            lineHeight: '1.33',
+            fontWeight: '700',
+          },
+        ],
+        lg: [
+          //sub headling
+          '18px',
+          {
+            lineHeight: '1.33',
+            fontWeight: '600',
+          },
+        ],
+        base: [
+          //body
+          '16px',
+          {
+            lineHeight: '1.25',
+            fontWeight: '400',
+          },
+        ],
+        sm: [
+          //subtitle
+          '14px',
+          {
+            lineHeight: '1.43',
+            fontWeight: '400',
+          },
+        ],
+        xs: [
+          //caption
+          '12px',
+          {
+            lineHeight: '1.33',
+            fontWeight: '400',
+          },
+        ],
+      },
     },
   },
   plugins: [],
