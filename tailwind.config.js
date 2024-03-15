@@ -24,6 +24,8 @@ export default {
         warning: 'hsla(39, 100%, 56%, 1)',
         info: 'hsla(225, 100%, 60%, 1)',
         success: 'hsla(147, 83%, 44%, 1)',
+        black: 'hsla(0, 0%, 0%, 1)',
+        white: 'hsla(0, 0%, 100%, 1)',
       },
       fontFamily: {
         sans: ['Poppins', 'Inter', 'sans-serif'],
