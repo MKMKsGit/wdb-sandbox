@@ -10,5 +10,5 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  render: () => <Button>Button</Button>,
+  render: () => <div className=''><Button fullWidth>Button</Button><Button disabled fullWidth className={'mt-2'}>Button</Button></div>,
 };
