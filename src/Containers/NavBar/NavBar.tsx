@@ -14,7 +14,7 @@ const NavBar = () => {
   const categoryNames = Object.keys(categories);
 
   const handleClickLogo = () => {
-    navigate('/');
+    navigate('/wdb-sandbox/');
   };
 
   const handleClickTab = (tab: string) => {
