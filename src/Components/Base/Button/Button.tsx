@@ -19,7 +19,7 @@ export const Button = (props: ButtonProps) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`${disabled ? disabledStyles.join(' ') : varientClasses.join(' ')} px-[10px] py-[17px] ${fullWidth ? 'w-full' : ''} ${className}`}
+      className={`${className ?? ''} ${disabled ? disabledStyles.join(' ') : varientClasses.join(' ')} px-[10px] py-[17px] ${fullWidth ? 'w-full' : 'w-fit'}`}
       {...restProps}
     >
       {children}
