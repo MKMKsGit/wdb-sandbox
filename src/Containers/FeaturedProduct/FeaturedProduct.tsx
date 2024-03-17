@@ -7,7 +7,7 @@ const FeaturedProduct = () => {
   const displayProducts = featuredProducts.slice(0, 4);
 
   return (
-    <div className={'flex gap-10 w-full'}>
+    <div className={'flex gap-10 w-full justify-center'}>
       {displayProducts.map((product) => {
         const { id, name, description, price, promotionalPrice, ratings, imageUrls } = product;
         return (

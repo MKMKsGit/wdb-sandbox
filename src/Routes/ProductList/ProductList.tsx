@@ -33,14 +33,14 @@ const ProductList = () => {
   }, [featuredProducts]);
 
   return (
-    <div id="product-list-container" className={'px-40 pt-24 pb-40 flex'}>
+    <div id="product-list-container" className={'px-40 pt-24 pb-40 flex w-full justify-center'}>
       <div id="product-list-sidebar"></div>
       <div id="product-list-content">
         <div id="product-list-title-and-sort" className={'mb-[60px]'}>
           <p className={'text-h5'}>{title}</p>
           <div id="product-list-sort-box"></div>
         </div>
-        <div className={`grid grid-cols-4 gap-x-10 gap-y-[60px]`}>
+        <div className={'grid grid-cols-4 gap-x-10 gap-y-[60px]'}>
           {currentProducts.map((product) => {
             const { id, name, description, price, promotionalPrice, ratings, imageUrls } = product;
             return (
