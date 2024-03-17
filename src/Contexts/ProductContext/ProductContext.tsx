@@ -4,7 +4,7 @@ import { Outlet, useParams } from 'react-router-dom';
 
 import Loading from '@/Components/Loading';
 import { IProductContext, ProductProviderProps } from '@/Contexts/ProductContext/types';
-import { useGetAllCategories } from '@/Hooks/useGetAllCategories';
+import { Category, useGetAllCategories } from '@/Hooks/useGetAllCategories';
 import { Product, useGetAllProducts } from '@/Hooks/useGetAllProducts';
 
 const ProductContext = createContext<IProductContext>({
@@ -22,19 +22,23 @@ const ProductProvider = ({ children }: ProductProviderProps) => {
   const categoriesGroupByName = tidy(categories, groupBy('name', groupBy.object()));
 
   const { data: products, loading: productsLoading } = useGetAllProducts();
-  console.log('products', products);
 
   useEffect(() => {
     if (category === undefined) {
       setFeaturedProducts(products);
       return;
     }
-    const featured = products?.filter((product) => product.categories.includes(category));
+    const featured = products?.filter((product) => {
+      const productCategory = product.categories;
+      const permaLinkOfCategory = categoriesGroupByName[category].map((category: Category) => category.permalink);
+
+      return productCategory.some((category) => permaLinkOfCategory.includes(category));
+    });
     setFeaturedProducts(featured);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, products]);
 
   const isLoading = categoriesLoading || productsLoading;
-  console.log('featuredProducts', featuredProducts);
 
   if (isLoading) {
     return <Loading />;

@@ -21,6 +21,11 @@ const NavBar = () => {
     navigate(tab);
   };
 
+  //TODO: Implement handleGoToCart
+  const handleGoToCart = () => {
+    // navigate('/cart');
+  };
+
   const hasItemInCart = false;
 
   return (
@@ -29,7 +34,7 @@ const NavBar = () => {
       handleClickLogo={handleClickLogo}
       handleClickTab={handleClickTab}
       rightAdornment={
-        <div className={'cursor-pointer'} onClick={() => navigate('/cart')}>
+        <div className={'cursor-pointer'} onClick={handleGoToCart}>
           {renderRightAdornmentIcon(hasItemInCart)}
         </div>
       }
