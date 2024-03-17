@@ -31,15 +31,15 @@ export default {
         sans: ['Poppins', 'Inter', 'sans-serif'],
       },
       fontSize: {
-        '6xl': [
-          //h1
+        h1: [
+          //h1h1
           '96px',
           {
             lineHeight: '1.21',
             fontWeight: '700',
           },
         ],
-        '5xl': [
+        h2: [
           //h2
           '64px',
           {
@@ -47,7 +47,7 @@ export default {
             fontWeight: '700',
           },
         ],
-        '4xl': [
+        h3: [
           //h3
           '48px',
           {
@@ -55,7 +55,7 @@ export default {
             fontWeight: '700',
           },
         ],
-        '3xl': [
+        h4: [
           //h4
           '40px',
           {
@@ -63,7 +63,7 @@ export default {
             fontWeight: '700',
           },
         ],
-        '2xl': [
+        h5: [
           //h5
           '32px',
           {
@@ -71,7 +71,7 @@ export default {
             fontWeight: '700',
           },
         ],
-        xl: [
+        h6: [
           //h6
           '24px',
           {
@@ -79,7 +79,7 @@ export default {
             fontWeight: '700',
           },
         ],
-        lg: [
+        subHeading: [
           //sub headling
           '18px',
           {
@@ -87,7 +87,7 @@ export default {
             fontWeight: '600',
           },
         ],
-        base: [
+        body: [
           //body
           '16px',
           {
@@ -95,7 +95,7 @@ export default {
             fontWeight: '400',
           },
         ],
-        sm: [
+        subtitle: [
           //subtitle
           '14px',
           {
@@ -103,7 +103,7 @@ export default {
             fontWeight: '400',
           },
         ],
-        xs: [
+        caption: [
           //caption
           '12px',
           {
