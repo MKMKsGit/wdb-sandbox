@@ -10,4 +10,7 @@ export default defineConfig({
     },
   },
   base: '/wdb-sandbox/',
+  build: {
+    outDir: 'docs',
+  },
 });
