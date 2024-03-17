@@ -2,6 +2,7 @@
   "name": "wdb-sandbox",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://mkmksgit.github.io/wdb-sandbox/",
   "type": "module",
   "scripts": {
     "start": "vite",

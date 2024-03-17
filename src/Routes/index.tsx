@@ -8,7 +8,7 @@ const AppRoute = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<BaseLayout />}>
+        <Route path="/wdb-sandbox/" element={<BaseLayout />}>
           <Route index element={<Home />} />
           <Route path=":category">
             <Route index element={<ProductList />} />

@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div
         id="home-cover"
-        className={'h-[420px] bg-cover bg-center overflow-hidden bg-[url("/assets/images/cover.png")]'}
+        className={'h-[420px] bg-cover bg-center overflow-hidden bg-[url("assets/images/cover.png")]'}
       ></div>
       <div id="home-container" className={'px-40 pt-24 pb-40 flex flex-col justify-center'}>
         <CollectionDetails />
