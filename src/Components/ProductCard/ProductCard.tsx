@@ -1,4 +1,4 @@
-import { formatNumberWithCommas } from '@/Utils/utils';
+import { formatNumberWithCommas, formatNumberWithDecimal } from '@/Utils/utils';
 
 import Rating from './Rating';
 
@@ -20,7 +20,7 @@ const ProductCard = (props: ProductCardProps) => {
 
   return (
     <div className="flex flex-col gap-4 min-w-[250px] max-w-[370px] relative flex-1">
-      <img className="w-full object-contain" src={imgUrl} alt={`picture of ${name}`} />
+      <img className="object-cover aspect-square" src={imgUrl} alt={`picture of ${name}`} />
       <div className="flex flex-col gap-2">
         <p className="text-h6 overflow-hidden overflow-ellipsis whitespace-nowrap">{name}</p>
         <p className="text-body text-secondary-700 overflow-hidden overflow-ellipsis whitespace-nowrap">
@@ -39,7 +39,9 @@ const ProductCard = (props: ProductCardProps) => {
         </div>
       </div>
       {isSale && (
-        <div className={'absolute right-0 top-6 px-2.5 py-1 bg-danger text-white'}>{`- ${percentageOff}%`}</div>
+        <div
+          className={'absolute right-0 top-6 px-2.5 py-1 bg-danger text-white'}
+        >{`- ${formatNumberWithDecimal(percentageOff)}%`}</div>
       )}
     </div>
   );
