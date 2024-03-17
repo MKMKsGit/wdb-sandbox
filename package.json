@@ -5,7 +5,7 @@
   "homepage": "https://mkmksgit.github.io/wdb-sandbox/",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "vite --mode development",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "prettier": "prettier --write .",

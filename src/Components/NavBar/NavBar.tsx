@@ -1,5 +1,6 @@
 type NavBarProps = {
   tabList: string[];
+  // eslint-disable-next-line no-unused-vars
   handleClickTab: (tab: string) => void;
   handleClickLogo: () => void;
   rightAdornment?: React.ReactNode;
@@ -13,7 +14,11 @@ const NavBar = (props: NavBarProps) => {
       <div id="navbar-content" className="flex justify-between items-center">
         <div id="left" className="flex gap-10 items-center">
           <div id="logo" className="cursor-pointer flex gap-2.5 items-center" onClick={handleClickLogo}>
-            <img className="w-[36px] h-[36px] object-contain" src="/assets/logo.svg" alt="logo" />
+            <img
+              className="w-[36px] h-[36px] object-contain"
+              src={`${import.meta.env.VITE_PUBLIC_URL}assets/logo.svg`}
+              alt="logo"
+            />
             <p className="text-subHeading">WDB</p>
           </div>
           <div className="flex gap-6">

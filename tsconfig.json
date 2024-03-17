@@ -4,7 +4,7 @@
     "target": "es6",
     "useDefineForClassFields": true,
     "lib": ["es6", "DOM", "DOM.Iterable"],
-    "module": "es6",
+    "module": "esnext",
     "skipLibCheck": true,
 
     /* Bundler mode */

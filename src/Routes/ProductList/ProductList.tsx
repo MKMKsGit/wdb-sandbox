@@ -40,7 +40,7 @@ const ProductList = () => {
           <p className={'text-h5'}>{title}</p>
           <div id="product-list-sort-box"></div>
         </div>
-        <div className={`grid grid-cols-${COLUMNS_PER_ROW} gap-x-10 gap-y-[60px]`}>
+        <div className={`grid grid-cols-4 gap-x-10 gap-y-[60px]`}>
           {currentProducts.map((product) => {
             const { id, name, description, price, promotionalPrice, ratings, imageUrls } = product;
             return (
