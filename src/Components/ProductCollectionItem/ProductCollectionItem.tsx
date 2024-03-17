@@ -11,7 +11,7 @@ const ProductCollectionItem = (props: ProductCollectionItemProps) => {
   const { header, description, imgUrl, onClick } = props;
 
   return (
-    <div className={'h-[500px] relative text-center text-white'}>
+    <div className={'flex-1 h-[500px] relative text-center text-white'}>
       <img className={'absolute object-none w-full h-full'} src={imgUrl} alt={`image of ${header} content`} />
       <div
         className={
