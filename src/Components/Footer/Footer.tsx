@@ -32,9 +32,9 @@ const Footer = (props: FooterProps) => {
         <div className={'flex gap-2'}>
           <p className={'text-caption'}>Powerd By</p>
           <div className={'flex items-center gap-2'}>
-            <img src="assets/skooldio-logo.png" alt="Skooldio" />
+            <img src="/assets/skooldio-logo.png" alt="Skooldio" />
             <div className="inline-block w-px self-stretch bg-neutral-100"></div>
-            <img src="assets/web-dev-logo.png" alt="Web Development Bootcamp" />
+            <img src="/assets/web-dev-logo.png" alt="Web Development Bootcamp" />
           </div>
         </div>
       </div>
