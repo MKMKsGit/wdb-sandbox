@@ -19,7 +19,7 @@ const ProductCard = (props: ProductCardProps) => {
   const percentageOff = isSale ? ((price - promotionPrice!) / price) * 100 : 0;
 
   return (
-    <div className="flex flex-col gap-4 w-[370px] relative">
+    <div className="flex flex-col gap-4 min-w-[250px] max-w-[370px] relative flex-1">
       <img className="w-full object-contain" src={imgUrl} alt={`picture of ${name}`} />
       <div className="flex flex-col gap-2">
         <p className="text-h6 overflow-hidden overflow-ellipsis whitespace-nowrap">{name}</p>
