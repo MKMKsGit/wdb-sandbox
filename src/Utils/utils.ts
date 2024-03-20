@@ -1,5 +1,6 @@
-export const formatNumberWithCommas = (number: number) => {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+export const formatNumberWithCommas = (number: number, decimal?: number) => {
+  const formattedNumber = decimal ? number.toFixed(decimal) : number.toString();
+  return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
 export const formatNumberWithDecimal = (number: number, decimal?: number) => {

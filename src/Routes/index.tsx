@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import BaseLayout from '@/Containers/BaseLayout';
+import Cart from '@/Routes/Cart';
 import Home from '@/Routes/Home';
 import ProductList from '@/Routes/ProductList';
 
@@ -14,7 +15,7 @@ const AppRoute = () => {
             <Route index element={<ProductList />} />
             <Route path=":id" element={<>Product Details</>} />
           </Route>
-          <Route path="cart" element={<>Cart</>} />
+          <Route path="cart" element={<Cart />} />
           <Route path="*" element={<>Not Found</>} />
         </Route>
       </Routes>

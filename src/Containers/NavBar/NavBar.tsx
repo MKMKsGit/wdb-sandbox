@@ -23,7 +23,7 @@ const NavBar = () => {
 
   //TODO: Implement handleGoToCart
   const handleGoToCart = () => {
-    // navigate('/cart');
+    navigate('/wdb-sandbox/cart');
   };
 
   const hasItemInCart = false;
