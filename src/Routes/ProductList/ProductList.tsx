@@ -1,20 +1,59 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import ProductCard from '@/Components/ProductCard';
 import { useProduct } from '@/Contexts/ProductContext';
+import { Product } from '@/Hooks/useGetAllProducts';
 import Pagination from '@/Routes/ProductList/Components/Pagination';
+
+enum SortType {
+  PRICE_ASC,
+  PRICE_DESC,
+  RATING,
+}
 
 const COLUMNS_PER_ROW = 4;
 const ROWS_PER_PAGE = 2;
 
+const sortPriceAsc = (a: Product, b: Product) => {
+  return a.price - b.price;
+};
+
+const sortPriceDesc = (a: Product, b: Product) => {
+  return b.price - a.price;
+};
+
+const sortRating = (a: Product, b: Product) => {
+  return b.ratings - a.ratings;
+};
+
 const ProductList = () => {
+  const [sort, setSort] = useState<SortType>(SortType.PRICE_ASC);
   const [pages, setPages] = useState(1);
   const { featuredProducts } = useProduct();
   const TOTAL_ITEM_PER_PAGE = ROWS_PER_PAGE * COLUMNS_PER_ROW;
-  const currentProducts = featuredProducts.slice((pages - 1) * TOTAL_ITEM_PER_PAGE, pages * TOTAL_ITEM_PER_PAGE);
   const totalPages = Math.ceil(featuredProducts.length / TOTAL_ITEM_PER_PAGE);
 
   const title = 'Product List';
+
+  const sortedProducts = useMemo(() => {
+    switch (sort) {
+      case SortType.PRICE_DESC:
+        return featuredProducts.sort(sortPriceDesc);
+      case SortType.RATING:
+        return featuredProducts.sort(sortRating);
+      case SortType.PRICE_ASC:
+      default:
+        return featuredProducts.sort(sortPriceAsc);
+    }
+  }, [sort, featuredProducts]);
+
+  const currentProducts = useMemo(() => {
+    return sortedProducts.slice((pages - 1) * TOTAL_ITEM_PER_PAGE, pages * TOTAL_ITEM_PER_PAGE);
+  }, [sortedProducts, pages, TOTAL_ITEM_PER_PAGE]);
+
+  const handleSortChange = (index: number) => {
+    setSort(index);
+  };
 
   const handlePageChange = (page: number) => {
     setPages(page);

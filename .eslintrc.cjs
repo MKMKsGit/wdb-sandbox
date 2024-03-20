@@ -8,8 +8,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'eslint-config-prettier',
     'plugin:storybook/recommended',
-    'plugin:storybook/recommended',
-    'plugin:storybook/recommended',
   ],
   settings: {
     react: {
@@ -27,7 +25,8 @@ module.exports = {
   plugins: ['react-refresh', 'import'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    'no-unused-vars': [
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
       'error',
       {
         vars: 'all',
