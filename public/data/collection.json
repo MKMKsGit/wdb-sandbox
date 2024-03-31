@@ -1,0 +1,49 @@
+[
+  {
+    "id": "COL0002",
+    "name": "Price Down",
+    "permalink": "price-down",
+    "description": "Prices are dropping faster than a hot potato! Don't miss these amazing deals on our hottest products. Major discounts for a limited time only.",
+    "items": [
+      {
+        "title": "Pleated Camisole Dress (Floral)",
+        "description": "Our versatile crossbody bag combines fashion and function, offering ample storage space with multiple compartments and a chic, adjustable strap."
+      },
+      {
+        "title": "Washable Milano Ribbed Crew Neck Long Sleeve Sweater"
+      }
+    ]
+  },
+  {
+    "id": "COL0001",
+    "name": "New Arrivals",
+    "permalink": "new-arrivals",
+    "description": "Fresh out of the box and into our store! Experience the latest offerings that are trendy, stylish, and top-quality. We've got new products hitting the shelves every week to satisfy your cravings.",
+    "items": [
+      {
+        "title": "Flexi Move Sneaker",
+        "description": "Step into comfort and style with our lightweight, cushioned sneakers, featuring a breathable mesh upper and a durable rubber sole."
+      },
+      {
+        "title": "Cotton Belted Short Sleeve Dress",
+        "description": "Exude timeless elegance in our classic little rose dress, featuring a tasteful knee-length hem and a tailored silhouette."
+      }
+    ]
+  },
+  {
+    "id": "zzzzzzzzzzzzzzzzzzzy",
+    "name": "Spring 2024",
+    "permalink": "spring-2024",
+    "description": "Step into a world of winter elegance and style with our latest Winter Collection. As temperatures drop, our curated selection of clothing is designed to keep you fashionably warm. From luxurious knitwear to trend-setting outerwear, each piece in our collection is a celebration of seasonal sophistication. Explore the blend of comfort and fashion, as we present you with the must-have ensembles to make a statement in the chilly months ahead. Welcome to a winter wardrobe that seamlessly combines coziness with chic aesthetics.",
+    "items": [
+      {
+        "title": "Flexi Move",
+        "description": "Step into a world where fashion meets functionality with our latest Sneaker Collection. Designed for those who appreciate the perfect fusion of style and comfort, our curated selection of sneakers is a celebration of urban chic."
+      },
+      {
+        "title": "Cozy Breeze",
+        "description": " Embrace the season with our carefully curated selection of garments, each piece thoughtfully designed to blend fashion and functionality. From cozy knits to elegant outerwear, our collection invites you to indulge in the allure of winter fashion. "
+      }
+    ]
+  }
+]
